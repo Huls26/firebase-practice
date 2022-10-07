@@ -1,0 +1,50 @@
+.container {
+    text-align: center;
+}
+
+.form {
+    width: 40%;
+    min-width: 14em;
+    margin-inline: auto;
+    margin-bottom: 2em;
+
+    transition: transfrom .3s ease-in-out;
+}
+
+.delete-item {
+    min-width: 17em;
+}
+
+.title {
+    margin-bottom: 1.3em;
+}
+
+label {
+    display: flex;
+}
+
+label > span {
+    text-align: start;
+    width: 6em;
+}
+
+label > * {
+    margin-bottom: 1em;
+}
+
+input {
+    width: 100%;
+}
+
+.document-id {
+    width: 10em;
+}
+
+.btn {
+    padding: .1em .6em;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    color: rgb(154, 155, 155);
+}
