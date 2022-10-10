@@ -1,50 +1,21 @@
-.container {
-    text-align: center;
-}
+.Home {
+    font-size: 90%;
+    text-transform: capitalize;
 
-.form {
-    width: 40%;
-    min-width: 14em;
+    padding: 0 1em;
+    max-width: 600px;
     margin-inline: auto;
-    margin-bottom: 2em;
-
-    transition: transfrom .3s ease-in-out;
 }
 
-.delete-item {
-    min-width: 17em;
-}
+.book-card {
+    border-radius: 6px;
+    background-color: antiquewhite;
 
-.title {
-    margin-bottom: 1.3em;
-}
-
-label {
-    display: flex;
-}
-
-label > span {
-    text-align: start;
-    width: 6em;
-}
-
-label > * {
+    padding: .4em 1em;
     margin-bottom: 1em;
 }
 
-input {
-    width: 100%;
-}
-
-.document-id {
-    width: 10em;
-}
-
-.btn {
-    padding: .1em .6em;
-    border-radius: 4px;
-}
-
-.btn:hover {
-    color: rgb(154, 155, 155);
+.card-author {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(203, 121, 20);
 }

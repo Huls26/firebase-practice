@@ -1,10 +1,10 @@
 import { initializeApp } from "firebase/app";
 import { 
+    getFirestore,
     collection,
     getDocs,
-    getFirestore, 
-
-} from "firebase/firestore"
+    onSnapshot,
+ } from "firebase/firestore";
 
 const firebaseConfig = {
     apiKey: "AIzaSyAIGNob0Q-9OtBvCOWUPot-Jk71FaZjg3A",
@@ -18,20 +18,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const colRef = collection(db, "books");
-const querySnapshot = await getDocs(colRef);
-let booksData;
 
-try {
-    const Data = querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id}));
-    booksData = Data;
-} catch(e) {
-    console.log("something went wrong", e)
-    booksData = "Something went wrong my friend"
-}
-
-export default booksData
-export { querySnapshot, colRef, db }
-
+export default db;
+export { colRef };
 
 // review lesson #4 net ninja
 // https://www.youtube.com/watch?v=s1frrNxq4js&list=PL4cUxeGkcC9jERUGvbudErNCeSZHWUVlb&index=4

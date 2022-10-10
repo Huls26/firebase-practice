@@ -1,0 +1,61 @@
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7em;
+    text-align: center;
+
+    padding: 0 1.3em;
+    max-width: 500px;
+    min-width: 360px;
+    margin-inline: auto;
+}
+
+.title {
+    margin-bottom: 1em;
+}
+
+.firebase-form {
+    text-align: start;
+    
+    max-width: 300px;
+    margin-inline: auto;
+}
+
+.form-title {
+    margin-bottom: .5em;
+}
+
+form {
+    background-color: aquamarine;
+
+    padding: 1em;
+
+    display: flex;
+    flex-direction: column;
+    gap: .8em;
+}
+
+input, form, button {
+    border-radius: 6px;
+}
+
+.title-container, .author-container,
+.delete-container {
+    display: flex;
+}
+
+label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: rgb(81, 94, 2);
+
+    width: 8em;
+}
+
+input {
+    flex-grow: 1;
+}
+
+.add-item {
+    margin-bottom: 1.6em;
+}
