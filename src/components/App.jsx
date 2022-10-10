@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { redirect } from "react-router-dom";
 import { 
     collection,
     addDoc,
@@ -43,6 +44,7 @@ export default function App() {
                 const docDelete = doc(db, "books", dataForm.id);
                 const deleteItem = await deleteDoc(docDelete);
             })();
+            redirect("/");
         } catch(error) {
             console.log("Something went wrong", error)
         }

@@ -5,7 +5,8 @@ import './index.css';
 
 import App from './components/App';
 import HomePage from './pages/HomePage';
-import Home, {loader as booksLoader} from "./components/Home";
+import Home, {loader as booksLoader, loader} from "./components/Home";
+import AddDelete from './pages/AddDeletePage';
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,8 @@ const router = createBrowserRouter([
       },
       {
         path:"add/delete",
-        element: <App />
+        element: <AddDelete />,
+        loader: booksLoader,
       },
     ]
   },
