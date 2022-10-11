@@ -14,18 +14,21 @@ export async function getBooks() {
     return querySnapshot.docs
 }
 
-export async function onSnapShotBooks() {
-    let querySnapshot
-    let data = onSnapshot(colRef, data => {
+
+export async function getUpdateBooks(callback) {
+    let docs
+    const dataBooks = onSnapshot(colRef, data => {
         const dataBooks = data.docs.map(doc => ({
                                         ...doc.data(),
                                         id: doc.id,
                                 }))
-       querySnapshot = dataBooks;
-    })
+        callback(dataBooks)
+    });
 
-    return querySnapshot
+    // realtime updates
+    // https://youtu.be/3aoxOtMM2rc
 }
+
 
 // export async function getBooks(callback) {
 //     const snapshot = onSnapshot(colRef, doc => {
